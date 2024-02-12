@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Head or Tail</title>
+    <link rel="stylesheet" href="cf_style.css" />
+  </head>
+  <body>
+    <h1><span>Heads OR Tails</span></h1>
+    <main class="hero">
+      <section class="playing-ground">
+        <div class="bot-container">
+          <div class="bot-img-container">
+            <img class="bot-img" src="./bot.webp" alt="bot" />
+          </div>
+          <div class="bot-text">
+            <h2>
+              Are you ready to test your luck?..<br />
+              Let's play a game of heads or tails!
+            </h2>
+            <h3>
+              &#183; Each correct guess earns you 1 point.<br />
+              &#183; Each wrong guess earns me 1 point.<br />
+              &#183; The player with the most points after 5 guesses wins!
+            </h3>
+          </div>
+        </div>
+
+        <div class="main">
+          <button
+            class="coins-btn"
+            title="Click to choose Head"
+            onclick="result('heads')"
+          >
+            <img class="coin-img" src="./heads.png" alt="Heads" />
+          </button>
+          <button
+            class="coins-btn"
+            title="Click to choose Tail"
+            onclick="result('tails')"
+          >
+            <img class="coin-img" src="./tails.png" alt="Tails" />
+          </button>
+        </div>
+
+        <button class="reset-btn" onclick="reset();">Reset</button>
+      </section>
+
+      <section class="result-ground">
+        <h1>SCORE</h1>
+        <div class="score-container">
+          <div class="player-score-container">
+            <span>Your Score</span>
+            <div id="js-playerScore" class="player-score"></div>
+          </div>
+          <div class="bot-score-container">
+            <span>Bot's Score</span>
+            <div id="js-botScore" class="bot-score"></div>
+          </div>
+        </div>
+        <h2 class="js-result"></h2>
+      </section>
+    </main>
+
+    <script src="cf.js"></script>
+  </body>
+</html>
